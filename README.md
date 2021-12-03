@@ -12,6 +12,7 @@ Um usuário possui nome, email e senha, sendo que o email é seu nome de usuári
 
 # Modelo relacional da aplicação
 ![img](https://user-images.githubusercontent.com/37542212/144457209-15f2f075-67e6-496c-9f8a-14846a7c06d4.png)
+OBS: não irei colocar o atributo de subtítulo na minha implementação, pois nem todo filme tem subtítulo, então achei meio irrelevante a existência desse atributo no sistema.
 
 # Tecnologias utilizadas
 ## Back end
