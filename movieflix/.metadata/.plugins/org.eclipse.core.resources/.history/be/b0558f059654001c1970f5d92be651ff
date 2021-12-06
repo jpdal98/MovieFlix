@@ -1,0 +1,90 @@
+package com.devsuperior.genreflix.services;
+
+import java.util.Optional;
+
+import javax.persistence.EntityNotFoundException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.devsuperior.genreflix.dtos.GenreDTO;
+import com.devsuperior.genreflix.dtos.ReviewDTO;
+import com.devsuperior.genreflix.entities.Genre;
+import com.devsuperior.genreflix.entities.Review;
+import com.devsuperior.genreflix.repositories.GenreRepository;
+import com.devsuperior.genreflix.services.exceptions.DataBaseException;
+import com.devsuperior.genreflix.services.exceptions.ResourceNotFoundException;
+
+@Service
+public class GenreService {
+
+	@Autowired
+	private GenreRepository genreRepository;
+	
+	@Transactional
+	public GenreDTO insert(GenreDTO dto) {
+		Genre entity = new Genre();
+		copyDtoToEntity(dto, entity);
+		entity = genreRepository.save(entity);
+		return new GenreDTO(entity);
+		
+	}
+
+	public void delete(Long id) {
+		try {
+			genreRepository.deleteById(id);
+		}
+		catch(EmptyResultDataAccessException e) {
+			throw new ResourceNotFoundException("Id not found " + id);
+		}
+		catch(DataIntegrityViolationException e) {
+			throw new DataBaseException("Integrity violation");
+		}
+	}
+	
+	@Transactional
+	public GenreDTO update(Long id, GenreDTO dto) {
+		try {
+			Genre entity = genreRepository.getById(id);
+			copyDtoToEntity(dto, entity);
+			entity = genreRepository.save(entity);
+			return new GenreDTO(entity);
+		}
+		catch(EntityNotFoundException e) {
+			throw new ResourceNotFoundException("Id not found " + id);
+		}
+	}
+
+	@Transactional(readOnly = true)
+	public Page<GenreDTO> findAllPaged(Pageable pageable){
+		Page<Genre> list = genreRepository.findAll(pageable);
+		return list.map(x -> new GenreDTO(x));
+	}
+
+	@Transactional(readOnly = true)
+	public GenreDTO findById(Long id) {
+		Optional<Genre> obj = genreRepository.findById(id);
+		Genre entity = obj.orElseThrow(()-> new ResourceNotFoundException("Entity not found"));
+		return new GenreDTO(entity, entity.getReviews());
+	}
+	
+	private void copyDtoToEntity(GenreDTO dto, Genre entity) {
+		entity.setTitle(dto.getTitle());
+		entity.setYear(dto.getYear());
+		entity.setImgURI(dto.getImgURI());
+		entity.setSynopsis(dto.getSynopsis());
+		entity.getGenre().setId(dto.getGenre_id());
+		
+		entity.getReviews().clear();
+		
+		for(ReviewDTO revDto : dto.getReviews()) {
+			Review review = reviewRepository.getById(revDto.getId());
+			entity.getReviews().add(review);
+		}
+	}
+}

@@ -1,0 +1,15 @@
+package com.devsuperior.movieflix.factories;
+
+import com.devsuperior.movieflix.entities.Movie;
+import com.devsuperior.movieflix.entities.Review;
+import com.devsuperior.movieflix.entities.User;
+
+public class ReviewFactory {
+
+	public static Review createReview() {
+		Review review = new Review(6L, "Que bosta ein");
+		review.setUser(new User(1L,"Alex", "alex@gmail.com", "$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG"));
+		review.setMovie(new Movie(31L, "A Lagoa Azul", 1980, "https://br.web.img2.acsta.net/medias/nmedia/18/90/95/91/20122128.jpg", "Após um naufrágio, duas crianças e o velho cozinheiro de um navio vão parar em uma ilha deserta no Oceano Pacífico. Pouco tempo depois, o cozinheiro morre, deixando o menino Richard e a menina Emmeline entregues à própria sorte."));
+		return review; 
+	}
+}

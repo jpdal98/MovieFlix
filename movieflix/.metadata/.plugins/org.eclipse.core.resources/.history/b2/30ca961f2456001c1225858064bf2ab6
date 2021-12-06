@@ -1,0 +1,5 @@
+package com.devsuperior.movieflix.services.impl;
+
+public class UserServiceImpl {
+
+}
