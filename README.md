@@ -1,5 +1,5 @@
 # MovieFlix
-Sistema baseado em um banco de filmes. Esse Sistema foi um trabalho desenvolvido no Bootcamp de Spring da DevSuperior.
+Sistema baseado em um banco de avaliação de filmes. Esse Sistema foi um trabalho desenvolvido no Bootcamp de Spring da DevSuperior.
 
 # Descrição
 O sistema MovieFlix consiste em um banco de filmes, os quais podem ser listados e avaliados pelos usuários. Usuários podem ser membros (MEMBER) e administradores (ADMIN). Apenas usuários membros podem inserir avaliações no sistema.
