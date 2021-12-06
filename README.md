@@ -1,10 +1,10 @@
-# MovieFlix :hourglass_flowing_sand:
+# MovieFlix
 Sistema baseado em um banco de filmes. Esse Sistema foi um trabalho desenvolvido no Bootcamp de Spring React da DevSuperior.
 
 # Descrição
-O sistema MovieFlix consiste em um banco de filmes, os quais podem ser listados e avaliados pelos usuários. Usuários podem ser visitantes (VISITOR) e membros (MEMBER). Apenas usuários membros podem inserir avaliações no sistema.
+O sistema MovieFlix consiste em um banco de filmes, os quais podem ser listados e avaliados pelos usuários. Usuários podem ser membros (MEMBER) e administradores (ADMIN). Apenas usuários membros podem inserir avaliações no sistema.
 
-Ao acessar o sistema, o usuário deve fazer seu login. Apenas usuários logados podem navegar nos filmes. Logo após fazer o login, o usuário vai para a listagem de filmes, que mostra os filmes de forma paginada, ordenados alfabeticamente por título. O usuário pode filtrar os filmes por gênero.
+Ao acessar o sistema, o usuário deve fazer seu login. Usuários logados e não logados podem navegar nos filmes. Logo após fazer o login, o usuário vai para a listagem de filmes, que mostra os filmes de forma paginada, ordenados alfabeticamente por título. O usuário pode filtrar os filmes por gênero.
 
 Ao selecionar um filme da listagem, é mostrada uma página de detalhes, onde é possível ver todas informações do filme, e também suas avaliações. Se o usuário for MEMBER, ele pode ainda registrar uma avaliação nessa tela.
 
