@@ -19,7 +19,7 @@ OBS: não irei colocar o atributo de subtítulo na minha implementação, pois n
 ## Back end
 - Java
 - Spring Boot
-- Jpa / Hibernate
+- Spring Data / Jpa e Hibernate
 - Spring Security / OAuth 2.0 e Token JWT
 - Maven
 
