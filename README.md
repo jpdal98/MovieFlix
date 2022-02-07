@@ -23,10 +23,6 @@ OBS: não irei colocar o atributo de subtítulo na minha implementação, pois n
 - Spring Security / OAuth 2.0 e Token JWT
 - Maven
 
-## Teste automatizados
-- Unidade
-- Integração
-
 ## Implantação em desenvolvimento
 - Banco de Dados: H2
 
