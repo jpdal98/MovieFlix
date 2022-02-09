@@ -47,7 +47,7 @@ public class GenreResourceIntegrationTests {
 		nonExistingId = 1000L;
 		countTotalGenres = 5L;
 		genreDto = GenreFactory.createGenreDTO(); 
-		username = "maria@gmail.com";
+		username = "alex@gmail.com";
 		password = "123456";
 	}
 	
@@ -95,10 +95,9 @@ public class GenreResourceIntegrationTests {
 		result.andExpect(status().isOk());
 		result.andExpect(jsonPath("$.content").exists());
 		result.andExpect(jsonPath("$.totalElements").value(countTotalGenres));
-		result.andExpect(jsonPath("$.content[0].name").value("Casa"));
-		result.andExpect(jsonPath("$.content[1].name").value("Computadores"));
-		result.andExpect(jsonPath("$.content[2].name").value("Eletrônicos"));
-		result.andExpect(jsonPath("$.content[3].name").value("Livros"));
+		result.andExpect(jsonPath("$.content[0].name").value("Action"));
+		result.andExpect(jsonPath("$.content[1].name").value("Adventure"));
+		result.andExpect(jsonPath("$.content[2].name").value("Comedy"));
 	}
 	
 	@Test
@@ -111,7 +110,7 @@ public class GenreResourceIntegrationTests {
 		
 		result.andExpect(status().isOk());
 		result.andExpect(jsonPath("$.id").value(existingId));
-		result.andExpect(jsonPath("$.name").value("Livros"));
+		result.andExpect(jsonPath("$.name").value("Terror"));
 	}
 	
 	@Test
