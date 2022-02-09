@@ -44,9 +44,9 @@ INSERT INTO tb_movie (title, year, imgURI, synopsis, genre_id) VALUES ('O Melhor
 INSERT INTO tb_movie (title, year, imgURI, synopsis, genre_id) VALUES ('A Barraca do Beijo', 2018, 'https://br.web.img2.acsta.net/pictures/18/05/04/15/03/2133793.jpg', 'O primeiro beijo de Elle vira um romance proibido com o garoto mais bonito do colégio, mas acaba colocando em risco a sua relação com seu melhor amigo.', 5);
 INSERT INTO tb_movie (title, year, imgURI, synopsis, genre_id) VALUES ('A Lagoa Azul', 1980, 'https://br.web.img2.acsta.net/medias/nmedia/18/90/95/91/20122128.jpg', 'Após um naufrágio, duas crianças e o velho cozinheiro de um navio vão parar em uma ilha deserta no Oceano Pacífico. Pouco tempo depois, o cozinheiro morre, deixando o menino Richard e a menina Emmeline entregues à própria sorte.', 5);
 
-INSERT INTO tb_review (text, user_id, movie_id) VALUES ('Filme muito bom!!', 1, 22);
-INSERT INTO tb_review (text, user_id, movie_id) VALUES ('Achei fraco e previsivel', 1, 6);
-INSERT INTO tb_review (text, user_id, movie_id) VALUES ('kkkkkkkkk', 1, 8);
-INSERT INTO tb_review (text, user_id, movie_id) VALUES ('Esperava mais', 1, 20);
-INSERT INTO tb_review (text, user_id, movie_id) VALUES ('Chorei muito, obra prima', 1, 28);
+INSERT INTO tb_review (text, user_id, movie_id) VALUES ('Filme muito bom!!', 2, 22);
+INSERT INTO tb_review (text, user_id, movie_id) VALUES ('Achei fraco e previsivel', 2, 6);
+INSERT INTO tb_review (text, user_id, movie_id) VALUES ('kkkkkkkkk', 2, 8);
+INSERT INTO tb_review (text, user_id, movie_id) VALUES ('Esperava mais', 2, 20);
+INSERT INTO tb_review (text, user_id, movie_id) VALUES ('Chorei muito, obra prima', 2, 28);
 
