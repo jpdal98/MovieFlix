@@ -16,20 +16,20 @@ Um usuário possui nome, email e senha, sendo que o email é seu nome de usuári
 OBS: não irei colocar o atributo de subtítulo na minha implementação, pois nem todo filme tem subtítulo, então achei meio irrelevante a existência desse atributo no sistema.
 
 # Tecnologias utilizadas
-## Back end
+## Back end:
 - Java
 - Spring Boot
 - Spring Data / Jpa e Hibernate
 - Spring Security / OAuth 2.0 e Token JWT
 - Maven
 
-## Teste automatizados
+## Teste automatizados:
 - Unidade
 - Integração
 
-## Implantação em desenvolvimento
+## Implantação em desenvolvimento:
 - Banco de Dados: H2
 
-## Padrões utilizados
+## Padrões utilizados:
 - Padrão arquitetural: REST
 - Padrões estruturais: DTO
